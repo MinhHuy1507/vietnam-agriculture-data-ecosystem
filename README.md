@@ -1,8 +1,4 @@
-<div align="center">
-
 # Vietnam Agriculture Data Ecosystem
-
-</div>
 
 <div align="center">
 
@@ -47,45 +43,7 @@ This ecosystem is composed of three major decoupled components, each handling a 
 
 The system follows a modern data engineering pipeline:
 
-```mermaid
-graph LR
-subgraph Sources
-  NSO[GSO Statistics]
-  NASA[NASA POWER]
-  GEE[Google Earth Engine]
-end
-
-subgraph Data_Lake["Data Lake"]
-  Ingest[Ingestion & Crawling]
-  Raw[Raw Storage (MinIO)]
-  Spark[Spark Processing]
-end
-
-subgraph Data_Warehouse["Data Warehouse"]
-  Bronze[Bronze Layer]
-  Silver[Silver Layer]
-  Gold[Gold Layer]
-  dbt[dbt Transformations]
-end
-
-subgraph Application["Application"]
-  API[FastAPI Backend]
-  Dash[Streamlit Dashboard]
-end
-
-NSO --> Ingest
-NASA --> Ingest
-GEE --> Ingest
-Ingest --> Raw
-Raw --> Spark
-Spark --> Bronze
-Bronze --> dbt
-dbt --> Silver
-Silver --> dbt
-dbt --> Gold
-Gold --> API
-API --> Dash
-```
+![Architecture Diagram](https://mermaid.ink/img/CmZsb3djaGFydCBMUgogICAgc3ViZ3JhcGggU291cmNlcwogICAgICAgIE5TT1siR1NPIFN0YXRpc3RpY3MiXQogICAgICAgIE5BU0FbIk5BU0EgUE9XRVIiXQogICAgICAgIEdFRVsiR29vZ2xlIEVhcnRoIEVuZ2luZSJdCiAgICBlbmQKCiAgICBzdWJncmFwaCBEYXRhX0xha2UgW0RhdGEgTGFrZV0KICAgICAgICBJbmdlc3RbIkluZ2VzdGlvbiAmIENyYXdsaW5nIl0KICAgICAgICBSYXdbIlJhdyBTdG9yYWdlIChNaW5JTykiXQogICAgICAgIFNwYXJrWyJTcGFyayBQcm9jZXNzaW5nIl0KICAgIGVuZAoKICAgIHN1YmdyYXBoIERhdGFfV2FyZWhvdXNlIFtEYXRhIFdhcmVob3VzZV0KICAgICAgICBCcm9uemVbIkJyb256ZSBMYXllciJdCiAgICAgICAgU2lsdmVyWyJTaWx2ZXIgTGF5ZXIiXQogICAgICAgIEdvbGRbIkdvbGQgTGF5ZXIiXQogICAgICAgIGRidFsiZGJ0IFRyYW5zZm9ybWF0aW9ucyJdCiAgICBlbmQKCiAgICBzdWJncmFwaCBBcHBsaWNhdGlvbgogICAgICAgIEFQSVsiRmFzdEFQSSBCYWNrZW5kIl0KICAgICAgICBEYXNoWyJTdHJlYW1saXQgRGFzaGJvYXJkIl0KICAgIGVuZAoKICAgIE5TTyAtLT4gSW5nZXN0CiAgICBOQVNBIC0tPiBJbmdlc3QKICAgIEdFRSAtLT4gSW5nZXN0CiAgICBJbmdlc3QgLS0+IFJhdwogICAgUmF3IC0tPiBTcGFyawogICAgU3BhcmsgLS0+IEJyb256ZQogICAgQnJvbnplIC0tPiBkYnQKICAgIGRidCAtLT4gU2lsdmVyCiAgICBTaWx2ZXIgLS0+IGRidAogICAgZGJ0IC0tPiBHb2xkCiAgICBHb2xkIC0tPiBBUEkKICAgIEFQSSAtLT4gRGFzaAo=)
 
 ## 🧩 Components
 
@@ -138,8 +96,7 @@ To explore the entire ecosystem, please visit the individual repositories linked
 **Quick Links:**
 *   [Data Lake Setup Guide](https://github.com/MinhHuy1507/vietnam-agriculture-datalake-public/blob/master/docs/OPERATIONS.md)
 *   [Data Warehouse Getting Started](https://github.com/MinhHuy1507/vietnam-agriculture-data-warehouse-public#getting-started)
-*   [Live Application Demo](https://vietnam-agriculture-app-public.streamlit.app/)
-*   [Application Set Up Locally Guide](https://github.com/MinhHuy1507/vietnam-agriculture-app-public/blob/master/docs/LOCAL_SETUP.md)
+*   [Run the App Locally](https://github.com/MinhHuy1507/vietnam-agriculture-app-public#running-locally-with-docker-compose)
 
 ## 📧 Author
 
