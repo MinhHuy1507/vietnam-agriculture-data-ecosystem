@@ -100,7 +100,9 @@ To explore the entire ecosystem, please visit the individual repositories linked
 **Quick Links:**
 *   [Data Lake Setup Guide](https://github.com/MinhHuy1507/vietnam-agriculture-datalake-public/blob/master/docs/OPERATIONS.md)
 *   [Data Warehouse Getting Started](https://github.com/MinhHuy1507/vietnam-agriculture-data-warehouse-public#getting-started)
-*   [Run the App Locally](https://github.com/MinhHuy1507/vietnam-agriculture-app-public#running-locally-with-docker-compose)
+*   [Live Application Demo](https://vietnam-agriculture-app-public.streamlit.app/)
+*   [Application Set Up Locally Guide](https://github.com/MinhHuy1507/vietnam-agriculture-app-public/blob/master/docs/LOCAL_SETUP.md)
+
 
 ## 📧 Author
 
